@@ -1,42 +1,22 @@
 <?php
 
-$a;
-$b;
-$c;
-$x;
+echo "Введите первое число:\n";
+$firstNumber = readline();
+echo "Введите математическую операцию:\n";
+$operation = readline();
+echo "Введите второе число:\n";
+$secondNumber = readline();
 
-echo"Введите первое число:\n";
-$a=readline();
-echo"Введите математическую операцию:\n";
-$c=readline();
-echo"Введите второе число:\n";
-$b=readline();
-
-if($c === "+")
-{
-    $x = $a + $b;
-    echo "Ответ: $x";
-}
-elseif($c === "-")
-{
-    $x = $a - $b;
-    echo "Ответ: $x";
-}
-elseif($c === "*")
-{
-    $x = $a * $b;
-    echo "Ответ: $x";
-}
-elseif($c === "/")
-{
-    $x = $a / $b;
-    echo "Ответ: $x";
-}
-elseif($c == 0)
-{
+if ($operation === "+") {
+    echo "Ответ:". $firstNumber + $secondNumber;
+} elseif ($operation === "-") {
+    echo "Ответ:".$firstNumber - $secondNumber;
+} elseif ($operation === "*") {
+    echo "Ответ:". $firstNumber * $secondNumber;
+} elseif ($operation === 0) {
     echo "На ноль делить нельзя";
-}
-else
-{
+} elseif ($operation === "/") {
+    echo "Ответ:".$firstNumber / $secondNumber;
+} else {
     echo "Не верная операция";
 }
